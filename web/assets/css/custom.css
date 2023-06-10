@@ -1,0 +1,7 @@
+@media print {
+  body {
+    break-inside: avoid;
+    break-after: avoid;
+    break-before: avoid;
+  }
+}
