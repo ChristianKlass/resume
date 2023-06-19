@@ -20,6 +20,6 @@ services:
     restart: always
     container_name: cloudflared_resume
     image: cloudflare/cloudflared:latest
-    command: tunnel --no-autoupdate run --token eyJhIjoiOGVhMTM4ZmE0YmM0MGQ2OWRhODAwYWFiZDAxNmIyODgiLCJ0IjoiMWM3OTMwNmEtNWM2OS00MGE1LWEwNTctN2E4ZDQ1ZGRhODA3IiwicyI6Ik5UbGpZek0yWm1NdFpETmtZUzAwWVRVd0xXRXhabVl0WTJOalptTmtNamRtTldNNCJ9
+    command: tunnel --no-autoupdate run --token ${CLOUDFLARED_RESUME}
 
 
