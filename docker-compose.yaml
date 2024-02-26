@@ -8,7 +8,7 @@ services:
     # ports:
     #   - 8000:80
     volumes:
-      - /home/ubuntu/projects/resume/web:/usr/share/nginx/html
+      - /home/mark/projects/resume/web:/usr/share/nginx/html
     healthcheck:
       test: curl --fail http://localhost || exit 1
       interval: 60s
