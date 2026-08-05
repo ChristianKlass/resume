@@ -19,9 +19,15 @@ DevOps and Platform Engineer with 8+ years of experience in infrastructure autom
 - Diagnosed and resolved AWS infrastructure issues including EC2 connectivity failures and CloudWatch log forwarding malfunctions, restoring stable cloud operations.
 - Automated 50+ batch processes using JobScheduler, cutting manual intervention by 40% and freeing the team for higher-value work.
 - Identified and resolved performance bottlenecks through JMeter load testing, improving application response times by 20%.
-- Built Bash and PowerShell automation for repetitive tasks and batch script validation, reducing human error and reclaiming hours of manual effort weekly.
 - Resolved 100+ production issues across the stack, directly improving system uptime and reliability.
 - Created the team's first formal documentation for RHEL9 patching, upgrades, and repository configuration, enabling clean handover to Day 2 operations.
+
+**EKS Platform Hardening**
+
+- Rebuilt EKS worker node images as CIS Level 1 hardened AL2023 AMIs across two UAT clusters, bringing container hosts onto the same hardening baseline already applied to the RHEL fleet.
+- Designed the security agent delivery model for endpoint protection, vulnerability scanning, and log forwarding, choosing host-baked or DaemonSet deployment per agent based on which needed host OS visibility.
+- Built a deferred-activation pattern so agents ship inside the AMI but register at first boot via Secrets Manager and IRSA, clearing agent identity state pre-bake to prevent GUID collisions across autoscaled nodes.
+- Built an offline RPM transfer pipeline (repotrack, archive, jumphost transfer) to bake packages in an environment with no direct repository access.
 
 ### DevOps Engineer — Z Turing _(Aug 2021 – Oct 2021)_
 
@@ -66,17 +72,22 @@ DevOps and Platform Engineer with 8+ years of experience in infrastructure autom
 
 - Built pvewatch, an open-source Proxmox backup and VM monitoring tool, shipped through its own GitLab CI pipeline with linting, tests, and SonarQube quality gates.
 
+### The Kopi Log _(Personal Project)_
+
+- Built an unattended tech-news pipeline that ingests RSS feeds, clusters related stories with TF-IDF, and synthesizes original analysis articles with an LLM — published as a static Astro site by a Kubernetes CronJob three times weekly.
+- Engineered for zero metered API spend — subscription LLM credentials via a local proxy, free Pexels image API with graceful degradation — with idempotent runs and a half-hourly freshness probe.
+
 ### NRIC Generator/Validator _([Open Source — GitHub](https://github.com/ChristianKlass/nric-generator-validator))_
 
 - Built a utility to generate and validate Singaporean NRIC numbers based on the official checksum algorithm, used for creating realistic test data in UAT environments.
 
 ## Skills
 
-**Cloud & Infrastructure:** AWS (EC2, EKS, CloudWatch, IAM) · Docker / Kubernetes / LXC · Proxmox VE / Linux / NFS · Ansible / CI/CD · Prometheus / Grafana / Loki
+**Cloud & Infrastructure:** AWS (EC2, EKS, CloudWatch, IAM) · AMI Pipelines · Docker / Kubernetes / LXC · Proxmox VE / Linux / NFS · Ansible / CI/CD · Prometheus / Grafana / Loki
 
 **AI & Automation:** LLM APIs (Claude, Gemini) · OpenAI Whisper · Event-driven Workflow Automation
 
-**Security & Languages:** IAM / SSO (Authentik) · Cloudflare Tunnels · RHEL Hardening · Python / Bash / PowerShell · Git / REST APIs / OAuth2
+**Security & Languages:** IAM / SSO (Authentik) · Cloudflare Tunnels · RHEL / CIS Hardening · Python / Bash / PowerShell · Git / REST APIs / OAuth2
 
 ## Education
 
