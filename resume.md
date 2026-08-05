@@ -48,10 +48,10 @@ DevOps and Platform Engineer with 8+ years of experience in infrastructure autom
 
 ### Homelab Infrastructure _(Personal Project)_
 
-- Run a production-grade homelab: a two-node Kubernetes cluster on Proxmox VMs, fully GitOps-managed — Flux reconciles 17 namespaces from a self-hosted GitLab, with image automation rolling out CI-built containers.
+- Run a production-grade homelab: a two-node Kubernetes cluster on Proxmox VMs, fully GitOps-managed — Flux reconciles 17 namespaces from a self-hosted GitLab, with image automation rolling out new container builds.
 - Manage guest infrastructure as code with Terraform (bpg/proxmox provider) covering 13 of 14 VM/LXC definitions; Ansible handles monitoring agents and watchdogs.
 - Keep all secrets encrypted at rest with SOPS + age, decrypted in-cluster by sops-secrets-operator.
-- Operate a four-tier GitLab backup chain ending in age-encrypted off-site storage on Cloudflare R2.
+- Operate a four-tier GitLab backup chain ending age-encrypted in Cloudflare R2, plus CloudNativePG PostgreSQL clusters with continuous barman backups to R2.
 - Run Frigate NVR with Coral USB EdgeTPU passthrough (~7.5 ms inference) and Intel iGPU Quick Sync decode over mergerfs union storage.
 - Expose services with zero inbound ports: Cloudflare Tunnels fronted by Authentik SSO.
 
