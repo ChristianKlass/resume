@@ -2,10 +2,12 @@
 
 **Software Engineer | DevOps | AI/ML Infrastructure**
 
+- 📞 +65 9226 8757
 - 📧 [klass.mark.christian@gmail.com](mailto:klass.mark.christian@gmail.com)
-- 🌐 [markklass.dev](https://www.markklass.dev/) · [resume.markklass.dev](https://resume.markklass.dev/)
-- 💼 [LinkedIn](https://www.linkedin.com/in/mark-klass-681262ba) · [GitHub](https://github.com/ChristianKlass)
+- 🐙 [github.com/ChristianKlass](https://github.com/ChristianKlass)
+- 💼 [linkedin.com/in/mark-klass-681262ba](https://www.linkedin.com/in/mark-klass-681262ba)
 - 📍 Based in Singapore. Willing to travel.
+- 📄 [Download PDF](https://resume.markklass.dev/resume_mark_klass.pdf)
 
 DevOps and Platform Engineer with 8+ years of experience in infrastructure automation, containerization, and cloud operations. Increasingly focused on AI/ML infrastructure and intelligent automation — building self-optimizing pipelines that integrate AI APIs, automated content generation, and data-driven feedback loops. Combines deep Linux systems expertise with a practical, ship-it approach to solving operational problems at scale.
 
