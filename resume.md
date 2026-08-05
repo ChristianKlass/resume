@@ -9,14 +9,14 @@
 - 📍 Based in Singapore. Willing to travel.
 - 📄 [Download PDF](https://resume.markklass.dev/resume_mark_klass.pdf)
 
-DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Most of the work is making operations run without a human: patching, provisioning, deployments, monitoring. Recent projects use LLMs for content pipelines that run unattended.
+DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Most of the work is making operations run without a human, whether that's patching, provisioning, deployments, or monitoring. Recent projects use LLMs for content pipelines that run unattended.
 
 ## Work Experience
 
 ### Software Engineer — WizVision Pte Ltd _(Nov 2021 – Present)_
 
 - RHEL9 upgrades and vulnerability patching across 11 production and UAT systems, clearing VMS scan findings.
-- Debugged and fixed AWS issues: EC2 connectivity failures, CloudWatch log forwarding.
+- Debugged and fixed AWS issues like EC2 connectivity failures and broken CloudWatch log forwarding.
 - Automated 50+ batch processes with JobScheduler, cutting manual intervention by 40%.
 - JMeter load testing found the bottlenecks; fixing them improved application response times by 20%.
 - Resolved 100+ production issues.
@@ -25,30 +25,30 @@ DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Mo
 **EKS Platform Hardening**
 
 - Worker nodes lagged the RHEL fleet's hardening baseline. Rebuilt their images as CIS Level 1 hardened AL2023 AMIs across two UAT clusters.
-- Each security agent — endpoint protection, vulnerability scanning, log forwarding — went host-baked or DaemonSet depending on whether it needed host OS visibility.
+- Each security agent, whether endpoint protection, vulnerability scanning, or log forwarding, went host-baked or DaemonSet depending on whether it needed host OS visibility.
 - Agents ship inside the AMI but activate at first boot, registering through Secrets Manager and IRSA. Identity state is cleared pre-bake so autoscaled nodes don't collide on GUIDs.
-- No direct repository access in the build environment, so packages arrive through an offline RPM pipeline: repotrack, archive, jumphost transfer.
+- The build environment had no direct repository access, so packages came in through an offline RPM pipeline using repotrack, archives, and a jumphost.
 
 ### DevOps Engineer — Z Turing _(Aug 2021 – Oct 2021)_
 
 - Node provisioning for Bitcoin, Filecoin, Ethereum, and TRON was manual; containerizing it with Docker cut setup time by 50%.
-- Monitoring and alerting went to Telegram, Discord, and WhatsApp — mean time to resolution dropped 25%.
+- Monitoring and alerting went to Telegram, Discord, and WhatsApp, and mean time to resolution dropped 25%.
 - Sized infrastructure for high-compute workloads.
 
 ### DevOps Engineer — ST Engineering: Mission Software & Services _(Jan 2021 – Aug 2021)_
 
 - Moved deployments onto Docker Compose to curb configuration drift.
 - Introduced Kubernetes for orchestration and horizontal scaling.
-- Observability and auth tooling: Prometheus, Grafana, Loki, Vector, KrakenD, Keycloak.
+- Integrated Prometheus, Grafana, Loki, Vector, KrakenD, and Keycloak for observability and auth.
 
 ### Software Engineer — ST Engineering Electronics _(Apr 2019 – Dec 2020)_
 
-- Stood up real-time monitoring — Prometheus, Grafana, VictoriaMetrics — as a working demo.
+- Stood up real-time monitoring on Prometheus, Grafana, and VictoriaMetrics as a working demo.
 - Containerized the monitoring stack (Docker, Kubernetes, Istio, KrakenD, Keycloak) so it could move between client environments.
 
 ### Identity Specialist — Azimuth Labs _(Apr 2018 – Jan 2019)_
 
-- Ran CA Identity Management and Governance for a major client — 20–30 tickets a day, handled independently.
+- Ran CA Identity Management and Governance for a major client and independently handled 20–30 tickets a day.
 - API and back-end services for authentication and authorization, on OAuth2 and OIDC.
 - Automated user provisioning and identity lifecycle management.
 
@@ -56,30 +56,30 @@ DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Mo
 
 ### Homelab Infrastructure _(Personal Project)_
 
-- A two-node Kubernetes cluster on Proxmox VMs, fully GitOps-managed: Flux reconciles 17 namespaces from a self-hosted GitLab, and image automation rolls out new container builds.
-- Terraform (bpg/proxmox) defines 13 of the 14 VMs and LXCs; Ansible handles monitoring agents and watchdogs.
+- A two-node Kubernetes cluster on Proxmox VMs, managed entirely through GitOps. Flux reconciles 17 namespaces from a self-hosted GitLab and image automation rolls out new container builds.
+- Terraform on the bpg/proxmox provider defines 13 of the 14 VMs and LXCs, and Ansible handles monitoring agents and watchdogs.
 - Secrets are SOPS + age encrypted at rest, decrypted in-cluster by sops-secrets-operator.
 - GitLab backups run through a four-tier chain, ending age-encrypted in Cloudflare R2. CloudNativePG PostgreSQL clusters take continuous barman backups to R2 as well.
-- Frigate NVR detects on a Coral USB EdgeTPU (~7.5 ms inference), decodes on Intel Quick Sync, and records to mergerfs union storage.
-- No inbound ports open: external access goes through Cloudflare Tunnels with Authentik SSO in front.
+- Frigate NVR detects on a Coral USB EdgeTPU at around 7.5 ms per inference, decodes on Intel Quick Sync, and records to mergerfs union storage.
+- No inbound ports are open. External access goes through Cloudflare Tunnels with Authentik SSO in front.
 
 ### Absurd Vault _(Personal Project)_
 
-- A fully automated content pipeline that ran 3x daily: Reddit story discovery → script generation (Claude) → voice synthesis (Fish Speech) → captioning (Whisper) → video assembly (ffmpeg) → YouTube/TikTok upload.
-- A second loop pulled YouTube Analytics, used AI to analyze trends, rewrote underperforming titles, and removed dead content. Weekly strategy reports came out of the same loop.
+- A fully automated content pipeline that ran three times a day. It found stories on Reddit, wrote scripts with Claude, synthesized voice-over with Fish Speech, captioned with Whisper, assembled video with ffmpeg, and uploaded to YouTube and TikTok.
+- A second loop pulled YouTube Analytics and analyzed trends with Claude, with a local Gemma model handling the daily pulses. It rewrote underperforming titles, removed dead content, and produced weekly strategy reports.
 
 ### pvewatch _([Open Source — GitHub](https://github.com/ChristianKlass/pvewatch))_
 
-- An open-source Proxmox backup and VM monitor. Ships through its own GitLab CI pipeline: lint, tests, SonarQube quality gates.
+- An open-source Proxmox backup and VM monitor. It ships through its own GitLab CI pipeline with lint, tests, and SonarQube quality gates.
 
 ### The Kopi Log _(Personal Project)_
 
-- An unattended tech-news pipeline: RSS ingestion, TF-IDF clustering of related stories, LLM-written analysis articles, published as a static Astro site by a Kubernetes CronJob three times a week.
-- Zero metered API spend — subscription LLM credentials through a local proxy, images from the free Pexels API. Runs are idempotent, and a half-hourly probe checks that the site hasn't gone stale.
+- An unattended tech-news pipeline that ingests RSS feeds, clusters related stories with TF-IDF, has an LLM write the analysis articles, and publishes them as a static Astro site three times a week from a Kubernetes CronJob.
+- It costs nothing in metered API fees, running on subscription LLM credentials through a local proxy and free images from Pexels. Runs are idempotent, and a half-hourly probe checks that the site hasn't gone stale.
 
 ### NRIC Generator/Validator _([Open Source — GitHub](https://github.com/ChristianKlass/nric-generator-validator))_
 
-- Generates and validates Singaporean NRIC numbers with the official checksum algorithm — written for realistic UAT test data.
+- Generates and validates Singaporean NRIC numbers with the official checksum algorithm, written for realistic UAT test data.
 
 ## Skills
 
