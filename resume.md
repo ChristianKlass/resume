@@ -48,16 +48,21 @@ DevOps and Platform Engineer with 8+ years of experience in infrastructure autom
 
 ### Homelab Infrastructure _(Personal Project)_
 
-- Built and maintain a production-grade homelab running a 3-node Kubernetes cluster (Calico CNI, MetalLB) on Proxmox VMs, with NFS-backed storage on Unraid.
-- Deployed and operate 25+ services including monitoring, media management, SSO, workflow automation, and ML-based video analytics.
-- Operate Longhorn distributed block storage and CloudNativePG PostgreSQL clusters with automated backups, providing production-grade data persistence across the cluster.
-- Implemented CI/CD pipelines with Gitea Actions for automated container image builds and Kubernetes deployments.
-- Manage infrastructure as code with Ansible for fleet provisioning and configuration across all nodes.
+- Run a production-grade homelab: a two-node Kubernetes cluster on Proxmox VMs, fully GitOps-managed — Flux reconciles 17 namespaces from a self-hosted GitLab, with image automation rolling out CI-built containers.
+- Manage guest infrastructure as code with Terraform (bpg/proxmox provider) covering 13 of 14 VM/LXC definitions; Ansible handles monitoring agents and watchdogs.
+- Keep all secrets encrypted at rest with SOPS + age, decrypted in-cluster by sops-secrets-operator.
+- Operate a four-tier GitLab backup chain ending in age-encrypted off-site storage on Cloudflare R2.
+- Run Frigate NVR with Coral USB EdgeTPU passthrough (~7.5 ms inference) and Intel iGPU Quick Sync decode over mergerfs union storage.
+- Expose services with zero inbound ports: Cloudflare Tunnels fronted by Authentik SSO.
 
 ### AI Video Pipeline _(Personal Project)_
 
-- Architected and deployed a fully automated content pipeline: Reddit story discovery → AI script generation (Claude) → voice synthesis (Fish Speech) → captioning (Whisper) → video assembly (ffmpeg) → YouTube/TikTok upload, running 3x daily.
-- Built a self-optimization loop that pulls YouTube Analytics data, uses AI to analyze trends, rewrites underperforming titles, removes dead content, and produces weekly strategy reports — closing the feedback loop between performance metrics and content selection.
+- Built and operated a fully automated content pipeline: Reddit story discovery → AI script generation (Claude) → voice synthesis (Fish Speech) → captioning (Whisper) → video assembly (ffmpeg) → YouTube/TikTok upload, which ran 3x daily.
+- Built a self-optimization loop that pulled YouTube Analytics data, used AI to analyze trends, rewrote underperforming titles, removed dead content, and produced weekly strategy reports — closing the feedback loop between performance metrics and content selection.
+
+### pvewatch _([Open Source — GitHub](https://github.com/ChristianKlass/pvewatch))_
+
+- Built pvewatch, an open-source Proxmox backup and VM monitoring tool, shipped through its own GitLab CI pipeline with linting, tests, and SonarQube quality gates.
 
 ### NRIC Generator/Validator _([Open Source — GitHub](https://github.com/ChristianKlass/nric-generator-validator))_
 
@@ -67,7 +72,7 @@ DevOps and Platform Engineer with 8+ years of experience in infrastructure autom
 
 **Cloud & Infrastructure:** AWS (EC2, EKS, CloudWatch, IAM) · Docker / Kubernetes / LXC · Proxmox VE / Linux / NFS · Ansible / CI/CD · Prometheus / Grafana / Loki
 
-**AI & Automation:** LLM APIs (Claude, Gemini) · OpenAI Whisper · GPU Inference (CUDA/TensorRT) · Event-driven Workflow Automation
+**AI & Automation:** LLM APIs (Claude, Gemini) · OpenAI Whisper · Event-driven Workflow Automation
 
 **Security & Languages:** IAM / SSO (Authentik) · Cloudflare Tunnels · RHEL Hardening · Python / Bash / PowerShell · Git / REST APIs / OAuth2
 
