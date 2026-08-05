@@ -9,7 +9,7 @@
 - 📍 Based in Singapore. Willing to travel.
 - 📄 [Download PDF](https://resume.markklass.dev/resume_mark_klass.pdf)
 
-DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Most of the work is making operations run without a human: patching, provisioning, deployments, monitoring. Recent projects apply LLMs to the same idea — content pipelines that run unattended.
+DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Most of the work is making operations run without a human: patching, provisioning, deployments, monitoring. Recent projects use LLMs for content pipelines that run unattended.
 
 ## Work Experience
 
@@ -24,15 +24,15 @@ DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Mo
 
 **EKS Platform Hardening**
 
-- Rebuilt EKS worker node images as CIS Level 1 hardened AL2023 AMIs across two UAT clusters, bringing container hosts onto the same hardening baseline already applied to the RHEL fleet.
-- Designed the security agent delivery model for endpoint protection, vulnerability scanning, and log forwarding, choosing host-baked or DaemonSet deployment per agent based on which needed host OS visibility.
-- Built a deferred-activation pattern so agents ship inside the AMI but register at first boot via Secrets Manager and IRSA, clearing agent identity state pre-bake to prevent GUID collisions across autoscaled nodes.
-- Built an offline RPM transfer pipeline (repotrack, archive, jumphost transfer) to bake packages in an environment with no direct repository access.
+- Worker nodes lagged the RHEL fleet's hardening baseline. Rebuilt their images as CIS Level 1 hardened AL2023 AMIs across two UAT clusters.
+- Each security agent — endpoint protection, vulnerability scanning, log forwarding — went host-baked or DaemonSet depending on whether it needed host OS visibility.
+- Agents ship inside the AMI but activate at first boot, registering through Secrets Manager and IRSA. Identity state is cleared pre-bake so autoscaled nodes don't collide on GUIDs.
+- No direct repository access in the build environment, so packages arrive through an offline RPM pipeline: repotrack, archive, jumphost transfer.
 
 ### DevOps Engineer — Z Turing _(Aug 2021 – Oct 2021)_
 
 - Node provisioning for Bitcoin, Filecoin, Ethereum, and TRON was manual; containerizing it with Docker cut setup time by 50%.
-- Built monitoring with alerting into Telegram, Discord, and WhatsApp — mean time to resolution dropped 25%.
+- Monitoring and alerting went to Telegram, Discord, and WhatsApp — mean time to resolution dropped 25%.
 - Sized infrastructure for high-compute workloads.
 
 ### DevOps Engineer — ST Engineering: Mission Software & Services _(Jan 2021 – Aug 2021)_
@@ -43,7 +43,7 @@ DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Mo
 
 ### Software Engineer — ST Engineering Electronics _(Apr 2019 – Dec 2020)_
 
-- Built and demoed real-time monitoring on Prometheus, Grafana, and VictoriaMetrics.
+- Stood up real-time monitoring — Prometheus, Grafana, VictoriaMetrics — as a working demo.
 - Containerized the monitoring stack (Docker, Kubernetes, Istio, KrakenD, Keycloak) so it could move between client environments.
 
 ### Identity Specialist — Azimuth Labs _(Apr 2018 – Jan 2019)_
@@ -63,7 +63,7 @@ DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Mo
 - Frigate NVR detects on a Coral USB EdgeTPU (~7.5 ms inference), decodes on Intel Quick Sync, and records to mergerfs union storage.
 - No inbound ports open: external access goes through Cloudflare Tunnels with Authentik SSO in front.
 
-### AI Video Pipeline _(Personal Project)_
+### Absurd Vault _(Personal Project)_
 
 - A fully automated content pipeline that ran 3x daily: Reddit story discovery → script generation (Claude) → voice synthesis (Fish Speech) → captioning (Whisper) → video assembly (ffmpeg) → YouTube/TikTok upload.
 - A second loop pulled YouTube Analytics, used AI to analyze trends, rewrote underperforming titles, and removed dead content. Weekly strategy reports came out of the same loop.
