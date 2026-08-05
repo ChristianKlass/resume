@@ -9,18 +9,18 @@
 - 📍 Based in Singapore. Willing to travel.
 - 📄 [Download PDF](https://resume.markklass.dev/resume_mark_klass.pdf)
 
-DevOps and Platform Engineer with 8+ years of experience in infrastructure automation, containerization, and cloud operations. Increasingly focused on AI/ML infrastructure and intelligent automation — building self-optimizing pipelines that integrate AI APIs, automated content generation, and data-driven feedback loops. Combines deep Linux systems expertise with a practical, ship-it approach to solving operational problems at scale.
+DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Most of the work is making operations run without a human: patching, provisioning, deployments, monitoring. Recent projects apply LLMs to the same idea — content pipelines that run unattended.
 
 ## Work Experience
 
 ### Software Engineer — WizVision Pte Ltd _(Nov 2021 – Present)_
 
-- Hardened security across 11 production and UAT systems by performing RHEL9 upgrades and vulnerability patching, resolving VMS scan findings and mitigating critical risks.
-- Diagnosed and resolved AWS infrastructure issues including EC2 connectivity failures and CloudWatch log forwarding malfunctions, restoring stable cloud operations.
-- Automated 50+ batch processes using JobScheduler, cutting manual intervention by 40% and freeing the team for higher-value work.
-- Identified and resolved performance bottlenecks through JMeter load testing, improving application response times by 20%.
-- Resolved 100+ production issues across the stack, directly improving system uptime and reliability.
-- Created the team's first formal documentation for RHEL9 patching, upgrades, and repository configuration, enabling clean handover to Day 2 operations.
+- RHEL9 upgrades and vulnerability patching across 11 production and UAT systems, clearing VMS scan findings.
+- Debugged and fixed AWS issues: EC2 connectivity failures, CloudWatch log forwarding.
+- Automated 50+ batch processes with JobScheduler, cutting manual intervention by 40%.
+- JMeter load testing found the bottlenecks; fixing them improved application response times by 20%.
+- Resolved 100+ production issues.
+- Wrote the team's first formal documentation for RHEL9 patching, upgrades, and repository configuration.
 
 **EKS Platform Hardening**
 
@@ -31,55 +31,55 @@ DevOps and Platform Engineer with 8+ years of experience in infrastructure autom
 
 ### DevOps Engineer — Z Turing _(Aug 2021 – Oct 2021)_
 
-- Cut node provisioning time by 50% by containerizing setup and configuration workflows with Docker for Bitcoin, Filecoin, Ethereum, and TRON.
-- Designed and deployed a monitoring solution with automated alerting via Telegram, Discord, and WhatsApp, reducing mean time to resolution by 25%.
-- Evaluated infrastructure requirements for high-compute workloads, ensuring technical feasibility and performance targets were met.
+- Node provisioning for Bitcoin, Filecoin, Ethereum, and TRON was manual; containerizing it with Docker cut setup time by 50%.
+- Built monitoring with alerting into Telegram, Discord, and WhatsApp — mean time to resolution dropped 25%.
+- Sized infrastructure for high-compute workloads.
 
 ### DevOps Engineer — ST Engineering: Mission Software & Services _(Jan 2021 – Aug 2021)_
 
-- Streamlined deployment workflows by implementing Docker Compose automation, reducing deployment friction and configuration drift.
-- Introduced Kubernetes for container orchestration, enabling horizontal scaling and improving fault tolerance for production services.
-- Integrated observability and auth tooling: Prometheus, Grafana, Loki, Vector, KrakenD, and Keycloak.
+- Moved deployments onto Docker Compose to curb configuration drift.
+- Introduced Kubernetes for orchestration and horizontal scaling.
+- Observability and auth tooling: Prometheus, Grafana, Loki, Vector, KrakenD, Keycloak.
 
 ### Software Engineer — ST Engineering Electronics _(Apr 2019 – Dec 2020)_
 
-- Built and demonstrated a real-time monitoring and alerting solution using Prometheus, Grafana, and VictoriaMetrics, enabling proactive system health management.
-- Pioneered containerization of the monitoring stack with Docker and Kubernetes (Istio, KrakenD, Keycloak), improving deployment portability across client environments.
+- Built and demoed real-time monitoring on Prometheus, Grafana, and VictoriaMetrics.
+- Containerized the monitoring stack (Docker, Kubernetes, Istio, KrakenD, Keycloak) so it could move between client environments.
 
 ### Identity Specialist — Azimuth Labs _(Apr 2018 – Jan 2019)_
 
-- Managed CA Identity Management and Governance for a major client, handling 20–30 tickets per day independently while maintaining identity governance compliance.
-- Built API and back-end services for authentication and authorization using OAuth2 and OIDC.
-- Automated user provisioning and identity lifecycle management, reducing administrative overhead.
+- Ran CA Identity Management and Governance for a major client — 20–30 tickets a day, handled independently.
+- API and back-end services for authentication and authorization, on OAuth2 and OIDC.
+- Automated user provisioning and identity lifecycle management.
 
 ## Projects
 
 ### Homelab Infrastructure _(Personal Project)_
 
-- Run a production-grade homelab: a two-node Kubernetes cluster on Proxmox VMs, fully GitOps-managed — Flux reconciles 17 namespaces from a self-hosted GitLab, with image automation rolling out new container builds.
-- Manage guest infrastructure as code with Terraform (bpg/proxmox provider) covering 13 of 14 VM/LXC definitions; Ansible handles monitoring agents and watchdogs.
-- Keep all secrets encrypted at rest with SOPS + age, decrypted in-cluster by sops-secrets-operator.
-- Operate a four-tier GitLab backup chain ending age-encrypted in Cloudflare R2, plus CloudNativePG PostgreSQL clusters with continuous barman backups to R2.
-- Run Frigate NVR with Coral USB EdgeTPU passthrough (~7.5 ms inference) and Intel iGPU Quick Sync decode over mergerfs union storage.
-- Expose services with zero inbound ports: Cloudflare Tunnels fronted by Authentik SSO.
+- A two-node Kubernetes cluster on Proxmox VMs, fully GitOps-managed: Flux reconciles 17 namespaces from a self-hosted GitLab, and image automation rolls out new container builds.
+- Terraform (bpg/proxmox) defines 13 of the 14 VMs and LXCs; Ansible handles monitoring agents and watchdogs.
+- Secrets are SOPS + age encrypted at rest, decrypted in-cluster by sops-secrets-operator.
+- GitLab backups run through a four-tier chain, ending age-encrypted in Cloudflare R2. CloudNativePG PostgreSQL clusters take continuous barman backups to R2 as well.
+- Frigate NVR detects on a Coral USB EdgeTPU (~7.5 ms inference), decodes on Intel Quick Sync, and records to mergerfs union storage.
+- No inbound ports open: external access goes through Cloudflare Tunnels with Authentik SSO in front.
 
 ### AI Video Pipeline _(Personal Project)_
 
-- Built and operated a fully automated content pipeline: Reddit story discovery → AI script generation (Claude) → voice synthesis (Fish Speech) → captioning (Whisper) → video assembly (ffmpeg) → YouTube/TikTok upload, which ran 3x daily.
-- Built a self-optimization loop that pulled YouTube Analytics data, used AI to analyze trends, rewrote underperforming titles, removed dead content, and produced weekly strategy reports — closing the feedback loop between performance metrics and content selection.
+- A fully automated content pipeline that ran 3x daily: Reddit story discovery → script generation (Claude) → voice synthesis (Fish Speech) → captioning (Whisper) → video assembly (ffmpeg) → YouTube/TikTok upload.
+- A second loop pulled YouTube Analytics, used AI to analyze trends, rewrote underperforming titles, and removed dead content. Weekly strategy reports came out of the same loop.
 
 ### pvewatch _([Open Source — GitHub](https://github.com/ChristianKlass/pvewatch))_
 
-- Built pvewatch, an open-source Proxmox backup and VM monitoring tool, shipped through its own GitLab CI pipeline with linting, tests, and SonarQube quality gates.
+- An open-source Proxmox backup and VM monitor. Ships through its own GitLab CI pipeline: lint, tests, SonarQube quality gates.
 
 ### The Kopi Log _(Personal Project)_
 
-- Built an unattended tech-news pipeline that ingests RSS feeds, clusters related stories with TF-IDF, and synthesizes original analysis articles with an LLM — published as a static Astro site by a Kubernetes CronJob three times weekly.
-- Engineered for zero metered API spend — subscription LLM credentials via a local proxy, free Pexels image API with graceful degradation — with idempotent runs and a half-hourly freshness probe.
+- An unattended tech-news pipeline: RSS ingestion, TF-IDF clustering of related stories, LLM-written analysis articles, published as a static Astro site by a Kubernetes CronJob three times a week.
+- Zero metered API spend — subscription LLM credentials through a local proxy, images from the free Pexels API. Runs are idempotent, and a half-hourly probe checks that the site hasn't gone stale.
 
 ### NRIC Generator/Validator _([Open Source — GitHub](https://github.com/ChristianKlass/nric-generator-validator))_
 
-- Built a utility to generate and validate Singaporean NRIC numbers based on the official checksum algorithm, used for creating realistic test data in UAT environments.
+- Generates and validates Singaporean NRIC numbers with the official checksum algorithm — written for realistic UAT test data.
 
 ## Skills
 
