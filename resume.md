@@ -2,18 +2,18 @@
 
 **Software Engineer | DevOps | AI/ML Infrastructure**
 
-- 📞 +65 9226 8757
-- 📧 [klass.mark.christian@gmail.com](mailto:klass.mark.christian@gmail.com)
-- 🐙 [github.com/ChristianKlass](https://github.com/ChristianKlass)
-- 💼 [linkedin.com/in/mark-klass-681262ba](https://www.linkedin.com/in/mark-klass-681262ba)
-- 📍 Based in Singapore. Willing to travel.
-- 📄 [Download PDF](https://resume.markklass.dev/resume_mark_klass.pdf)
+- Phone: +65 9226 8757
+- Email: [klass.mark.christian@gmail.com](mailto:klass.mark.christian@gmail.com)
+- GitHub: [github.com/ChristianKlass](https://github.com/ChristianKlass)
+- LinkedIn: [linkedin.com/in/mark-klass-681262ba](https://www.linkedin.com/in/mark-klass-681262ba)
+- Location: Based in Singapore. Willing to travel.
+- PDF: [resume.markklass.dev/resume_mark_klass.pdf](https://resume.markklass.dev/resume_mark_klass.pdf)
 
 DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Most of the work is making operations run without a human, whether that's patching, provisioning, deployments, or monitoring. Recent projects use LLMs for content pipelines that run unattended.
 
 ## Work Experience
 
-### Software Engineer — WizVision Pte Ltd _(Nov 2021 – Present)_
+### Software Engineer | WizVision Pte Ltd _(Nov 2021 – Present)_
 
 - RHEL9 upgrades and vulnerability patching across 11 production and UAT systems, clearing VMS scan findings.
 - Debugged and fixed AWS issues like EC2 connectivity failures and broken CloudWatch log forwarding.
@@ -24,29 +24,29 @@ DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Mo
 
 **EKS Platform Hardening**
 
-- Worker nodes lagged the RHEL fleet's hardening baseline. Rebuilt their images as CIS Level 1 hardened AL2023 AMIs across two UAT clusters.
+- EKS worker nodes lagged the RHEL fleet's hardening baseline. Rebuilt their images as CIS Level 1 hardened AL2023 AMIs across two UAT clusters.
 - Each security agent, whether endpoint protection, vulnerability scanning, or log forwarding, went host-baked or DaemonSet depending on whether it needed host OS visibility.
 - Agents ship inside the AMI but activate at first boot, registering through Secrets Manager and IRSA. Identity state is cleared pre-bake so autoscaled nodes don't collide on GUIDs.
 - The build environment had no direct repository access, so packages came in through an offline RPM pipeline using repotrack, archives, and a jumphost.
 
-### DevOps Engineer — Z Turing _(Aug 2021 – Oct 2021)_
+### DevOps Engineer | Z Turing _(Aug 2021 – Oct 2021)_
 
 - Node provisioning for Bitcoin, Filecoin, Ethereum, and TRON was manual; containerizing it with Docker cut setup time by 50%.
 - Monitoring and alerting went to Telegram, Discord, and WhatsApp, and mean time to resolution dropped 25%.
 - Sized infrastructure for high-compute workloads.
 
-### DevOps Engineer — ST Engineering: Mission Software & Services _(Jan 2021 – Aug 2021)_
+### DevOps Engineer | ST Engineering: Mission Software & Services _(Jan 2021 – Aug 2021)_
 
 - Moved deployments onto Docker Compose to curb configuration drift.
 - Introduced Kubernetes for orchestration and horizontal scaling.
 - Integrated Prometheus, Grafana, Loki, Vector, KrakenD, and Keycloak for observability and auth.
 
-### Software Engineer — ST Engineering Electronics _(Apr 2019 – Dec 2020)_
+### Software Engineer | ST Engineering Electronics _(Apr 2019 – Dec 2020)_
 
 - Stood up real-time monitoring on Prometheus, Grafana, and VictoriaMetrics as a working demo.
 - Containerized the monitoring stack (Docker, Kubernetes, Istio, KrakenD, Keycloak) so it could move between client environments.
 
-### Identity Specialist — Azimuth Labs _(Apr 2018 – Jan 2019)_
+### Identity Specialist | Azimuth Labs _(Apr 2018 – Jan 2019)_
 
 - Ran CA Identity Management and Governance for a major client and independently handled 20–30 tickets a day.
 - API and back-end services for authentication and authorization, on OAuth2 and OIDC.
@@ -83,11 +83,11 @@ DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Mo
 
 ## Skills
 
-**Cloud & Infrastructure:** AWS (EC2, EKS, CloudWatch, IAM) · AMI Pipelines · Docker / Kubernetes / LXC · Proxmox VE / Linux / NFS · Ansible / CI/CD · Prometheus / Grafana / Loki
+**Cloud & Infrastructure:** AWS (EC2, EKS, CloudWatch, IAM), Terraform, AMI Pipelines, Kubernetes, Docker, LXC, GitLab CI, Flux, GitOps, Helm, Ansible, SOPS, Proxmox VE, Linux, NFS, Prometheus, Grafana, Loki
 
-**AI & Automation:** LLM APIs (Claude, Gemini) · OpenAI Whisper · Event-driven Workflow Automation
+**AI & Automation:** LLM APIs (Claude, Gemini), OpenAI Whisper, Event-driven Workflow Automation
 
-**Security & Languages:** IAM / SSO (Authentik) · Cloudflare Tunnels · RHEL / CIS Hardening · Python / Bash / PowerShell · Git / REST APIs / OAuth2
+**Security & Languages:** IAM, SSO (Authentik), Cloudflare Tunnels, RHEL Hardening, CIS Benchmarks, Python, Bash, PowerShell, Git, REST APIs, OAuth2
 
 ## Education
 
@@ -97,8 +97,8 @@ DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Mo
 
 ## Certifications
 
-- **Software Design Guidelines for Safety-Critical Systems** — Critical Systems Labs _(October 2019)_
-- **Government Commercial Cloud – Foundation** — Government Technology Agency _(April 2022)_
+- **Software Design Guidelines for Safety-Critical Systems** — Critical Systems Labs _(Oct 2019)_
+- **Government Commercial Cloud – Foundation** — Government Technology Agency _(Apr 2022)_
 
 ## Languages
 
