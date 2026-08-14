@@ -6,7 +6,7 @@
 - Email: [klass.mark.christian@gmail.com](mailto:klass.mark.christian@gmail.com)
 - GitHub: [github.com/ChristianKlass](https://github.com/ChristianKlass)
 - LinkedIn: [linkedin.com/in/mark-klass-681262ba](https://www.linkedin.com/in/mark-klass-681262ba)
-- Location: Based in Singapore. Willing to travel.
+- Location: Based in Singapore. Hybrid or remote preferred.
 - PDF: [resume.markklass.dev/resume_mark_klass.pdf](https://resume.markklass.dev/resume_mark_klass.pdf)
 
 DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Most of the work is making operations run without a human, whether that's patching, provisioning, deployments, or monitoring. Recent projects use LLMs for content pipelines that run unattended.
