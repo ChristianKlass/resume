@@ -74,7 +74,7 @@ DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Mo
 ### The Kopi Log _(Personal Project)_
 
 - An unattended tech-news pipeline that ingests RSS feeds, clusters related stories with TF-IDF, has an LLM write the analysis articles, and publishes them as a static Astro site three times a week from a Kubernetes CronJob. 121 articles published unattended since June 18, and still running.
-- It costs nothing in metered API fees, running on subscription LLM credentials through a local proxy and free images from Pexels. Runs are idempotent, and a half-hourly probe checks that the site hasn't gone stale.
+- It operates at zero marginal API cost and uses free images from Pexels. Runs are idempotent, and a half-hourly probe checks that the site hasn't gone stale.
 
 ## Skills
 
