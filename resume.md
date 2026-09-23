@@ -13,7 +13,7 @@ DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Mo
 
 ## Work Experience
 
-### Software Engineer | WizVision Pte Ltd _(Nov 2021 – Present)_
+### Software Engineer | WizVision Pte Ltd _(Nov 2021 - Present)_
 
 **EKS Platform Hardening**
 
@@ -29,26 +29,26 @@ DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Mo
 - JMeter load testing found the bottlenecks; fixing them improved application response times by 20%.
 - Wrote the team's first formal documentation for RHEL9 patching, upgrades, and repository configuration.
 
-### DevOps Engineer | Z Turing _(Aug 2021 – Oct 2021)_
+### DevOps Engineer | Z Turing _(Aug 2021 - Oct 2021)_
 
 - Node provisioning for Bitcoin, Filecoin, Ethereum, and TRON was manual; containerizing it with Docker cut setup time by 50%.
 - Monitoring and alerting went to Telegram, Discord, and WhatsApp, and mean time to resolution dropped 25%.
 - Sized infrastructure for high-compute workloads.
 
-### DevOps Engineer | ST Engineering: Mission Software & Services _(Jan 2021 – Aug 2021)_
+### DevOps Engineer | ST Engineering: Mission Software & Services _(Jan 2021 - Aug 2021)_
 
 - Moved deployments onto Docker Compose to curb configuration drift.
 - Introduced Kubernetes for orchestration and horizontal scaling.
 - Integrated Prometheus, Grafana, Loki, Vector, KrakenD, and Keycloak for observability and auth.
 
-### Software Engineer | ST Engineering Electronics _(Apr 2019 – Dec 2020)_
+### Software Engineer | ST Engineering Electronics _(Apr 2019 - Dec 2020)_
 
 - Stood up real-time monitoring on Prometheus, Grafana, and VictoriaMetrics as a working demo.
 - Containerized the monitoring stack (Docker, Kubernetes, Istio, KrakenD, Keycloak) so it could move between client environments.
 
-### Identity Specialist | Azimuth Labs _(Apr 2018 – Jan 2019)_
+### Identity Specialist | Azimuth Labs _(Apr 2018 - Jan 2019)_
 
-- Ran CA Identity Management and Governance for a major client and independently handled 20–30 tickets a day.
+- Ran CA Identity Management and Governance for a major client and independently handled 20-30 tickets a day.
 - API and back-end services for authentication and authorization, on OAuth2 and OIDC.
 - Automated user provisioning and identity lifecycle management.
 
@@ -67,7 +67,7 @@ DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Mo
 - A fully automated content pipeline that ran three times a day. It found stories on Reddit, wrote scripts with Claude, synthesized voice-over with Fish Speech, captioned with Whisper, assembled video with ffmpeg, and uploaded to YouTube and TikTok.
 - A second loop pulled YouTube Analytics and analyzed trends with Claude, with a local Gemma model handling the daily pulses. It rewrote underperforming titles, removed dead content, and produced weekly strategy reports.
 
-### pvewatch _([Open Source — GitHub](https://github.com/ChristianKlass/pvewatch))_
+### pvewatch _([Open Source - GitHub](https://github.com/ChristianKlass/pvewatch))_
 
 - An open-source Proxmox backup and VM monitor. It ships through its own GitLab CI pipeline with lint, tests, and SonarQube quality gates.
 
@@ -86,12 +86,12 @@ DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Mo
 
 ## Education & Certifications
 
-- **BSc in Computer Science (Digital Systems Security)** — University of Wollongong – SIM _(2015 – 2018)_
-- **Diploma in Interactive Media Informatics** — Temasek Polytechnic _(2009 – 2012)_
-- **Higher NITEC in Information Technology (Networking)** — Institute of Technical Education _(2007 – 2009)_
-- **Government Commercial Cloud – Foundation** — Government Technology Agency _(Apr 2022)_
-- **Software Design Guidelines for Safety-Critical Systems** — Critical Systems Labs _(Oct 2019)_
+- **BSc in Computer Science (Digital Systems Security)** | University of Wollongong - SIM _(2015 - 2018)_
+- **Diploma in Interactive Media Informatics** | Temasek Polytechnic _(2009 - 2012)_
+- **Higher NITEC in Information Technology (Networking)** | Institute of Technical Education _(2007 - 2009)_
+- **Government Commercial Cloud - Foundation** | Government Technology Agency _(Apr 2022)_
+- **Software Design Guidelines for Safety-Critical Systems** | Critical Systems Labs _(Oct 2019)_
 
 ## Languages & Interests
 
-**Languages:** English _(Native)_ — **Interests:** Cooking · Reading · Learning · Home Improvement
+**Languages:** English _(Native)_ | **Interests:** Cooking · Reading · Learning · Home Improvement
