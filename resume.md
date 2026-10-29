@@ -57,10 +57,10 @@ DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Mo
 
 ### Homelab Infrastructure _(Personal Project)_
 
-- A two-node Kubernetes cluster on Proxmox VMs, managed entirely through GitOps. Flux reconciles 17 namespaces from a self-hosted GitLab and image automation rolls out new container builds.
-- Terraform on the bpg/proxmox provider defines 13 of the 14 VMs and LXCs, and Ansible handles monitoring agents and watchdogs.
+- A four-node Kubernetes cluster (two Proxmox VMs, two bare-metal workers including an RTX 3070 node for local LLM inference), managed entirely through GitOps. Flux reconciles 44 Kustomizations from self-hosted Forgejo and image automation rolls out new container builds.
+- Terraform on the bpg/proxmox provider defines the Proxmox VMs and LXCs it owns, and Ansible handles monitoring agents and watchdogs.
 - Secrets are SOPS + age encrypted at rest, decrypted in-cluster by sops-secrets-operator.
-- GitLab backups run through a four-tier chain, ending age-encrypted in Cloudflare R2. CloudNativePG PostgreSQL clusters take continuous barman backups to R2 as well.
+- Git server dumps and NAS shares go off-site nightly as encrypted restic snapshots on Google Drive, and CloudNativePG PostgreSQL clusters take daily barman backups to Cloudflare R2.
 - No inbound ports are open. External access goes through Cloudflare Tunnels with Authentik SSO in front.
 
 ### Absurd Vault _(Personal Project)_
@@ -70,16 +70,16 @@ DevOps and platform engineer, 8+ years, mostly on Linux, AWS, and Kubernetes. Mo
 
 ### pvewatch _([Open Source - GitHub](https://github.com/ChristianKlass/pvewatch))_
 
-- An open-source Proxmox backup and VM monitor. It ships through its own GitLab CI pipeline with lint, tests, and SonarQube quality gates.
+- An open-source Proxmox backup and VM monitor. It ships through its own Forgejo Actions pipeline with lint, tests, and SonarQube quality gates.
 
 ### The Kopi Log _(Personal Project)_
 
-- An unattended tech-news pipeline that ingests RSS feeds, clusters related stories with TF-IDF, has an LLM write the analysis articles, and publishes them as a static Astro site three times a week from a Kubernetes CronJob. 121 articles published unattended since June 18, and still running.
+- An unattended tech-news pipeline that ingests RSS feeds, clusters related stories with TF-IDF, has an LLM write the analysis articles, and publishes them as a static Astro site three times a week from a Kubernetes CronJob. 276 articles published unattended since June 18, and still running.
 - It operates at zero marginal API cost and uses free images from Pexels. Runs are idempotent, and a half-hourly probe checks that the site hasn't gone stale.
 
 ## Skills
 
-**Cloud & Infrastructure:** AWS (EC2, EKS, CloudWatch, IAM), Terraform, AMI Pipelines, Kubernetes, Docker, LXC, GitLab CI, Flux, GitOps, Helm, Ansible, SOPS, Proxmox VE, Linux, NFS, Prometheus, Grafana, Loki
+**Cloud & Infrastructure:** AWS (EC2, EKS, CloudWatch, IAM), Terraform, AMI Pipelines, Kubernetes, Docker, LXC, GitLab CI, Forgejo Actions, Flux, GitOps, Helm, Ansible, SOPS, Proxmox VE, Linux, NFS, Prometheus, Grafana, Loki
 
 **AI & Automation:** LLM APIs (Claude, Gemini), OpenAI Whisper, Event-driven Workflow Automation
 
